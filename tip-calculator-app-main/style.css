@@ -58,6 +58,12 @@ main {
   color: hsl(183, 100%, 15%);
   font-size: 24px;
   margin-top: 0.3em;
+  border: 0.1em solid transparent;
+}
+
+.inputField:focus {
+  outline: none;
+  border: 0.1em solid hsl(172, 67%, 45%);
 }
 
 .input {
@@ -85,6 +91,12 @@ main {
   border-radius: 0.3em;
 }
 
+.btn:hover {
+  cursor: pointer;
+  background-color: hsl(173, 61%, 77%);
+  color: hsl(183, 100%, 15%);
+}
+
 .btnCustom {
   color: hsl(183, 100%, 15%);
   background-color: hsl(189, 41%, 97%);
@@ -95,6 +107,12 @@ main {
   width: 42.5%;
   border-radius: 0.3em;
   text-align: right;
+  border: 0.1em solid transparent;
+}
+
+.btnCustom:focus {
+  outline: none;
+  border: 0.1em solid hsl(172, 67%, 45%);
 }
 
 .resultsContainer {
@@ -133,4 +151,15 @@ main {
   font-size: 1rem;
   border-radius: 0.2em;
   padding: 0.5em;
+}
+
+.btnReset:hover {
+  cursor: pointer;
+  background-color: hsl(173, 61%, 77%);
+  color: hsl(183, 100%, 15%);
+}
+
+.selected {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
 }
