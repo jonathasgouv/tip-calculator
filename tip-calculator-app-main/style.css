@@ -1,18 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  font-weight: bold;
+  padding: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+}
+
+.titleDiv {
+  font-size: 1.5em;
+  text-align: center;
+  letter-spacing: 0.3em;
+  color: hsl(183, 100%, 15%);
+  padding: 1em;
+}
+
+main {
+  background-color: #fff;
+  height: 100%;
+  padding: 2em;
+  padding-right: 1.5em;
+  border-radius: 1.5em 1.5em 0 0;
+  font-size: 1.1rem;
+}
+
+.inputContainer {
+  color: hsl(186, 14%, 43%);
+  width: 100%;
+}
+
 .inputIcon {
   position: absolute;
-  left: 0.5em;
-  color: rgb(0, 128, 255);
+  left: 1em;
+  color: rgb(255, 0, 0);
 
   /* Vertically center the icon in the input */
-  top: calc(50% - 0.5em);
+  top: calc(50% - 0.2em);
 }
 
 .inputField {
   padding: 0.5em;
   padding-left: 0.5em;
   text-align: right;
+  width: 93%;
+  height: 1em;
+  border-radius: 0.3em;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-size: 24px;
+  margin-top: 0.3em;
 }
 
 .input {
   position: relative;
+}
+
+.separator {
+  margin-top: 2em;
+}
+
+.tipPercent {
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.btn {
+  color: #fff;
+  background-color: hsl(183, 100%, 15%);
+  font-size: 24px;
+  padding: 0.2em;
+  margin-top: 0.5em;
+  width: 48%;
+  border-radius: 0.3em;
+}
+
+.btnCustom {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+  font-size: 24px;
+  padding: 0.2em;
+  padding-right: 0.5em;
+  margin-top: 0.5em;
+  width: 42.5%;
+  border-radius: 0.3em;
+  text-align: right;
+}
+
+.resultsContainer {
+  background-color: hsl(183, 100%, 15%);
+  margin-top: 2em;
+  border-radius: 0.5em;
+  padding: 2em 1.5em 1em 1.5em;
+}
+
+.roll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleTip {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.description {
+  font-size: 0.7em;
+  color: hsl(184, 14%, 56%);
+}
+
+.price {
+  font-size: 1.8rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.btnReset {
+  width: 100%;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-size: 1rem;
+  border-radius: 0.2em;
+  padding: 0.5em;
 }

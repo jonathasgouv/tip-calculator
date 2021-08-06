@@ -16,6 +16,11 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
+    <section>
+      <div class="titleDiv">
+        <p>SPLI<br />TTER</p>
+      </div>
+    </section>
     <main>
       <section class="inputContainer">
         <div class="billAmount">
@@ -27,22 +32,30 @@
               class="inputIcon"
             />
             <input
-              type="text"
+              type="number"
+              min="0"
               placeholder="0"
               id="inputBill"
               class="inputField"
             />
           </div>
         </div>
-        <div class="tipPercent">
+        <div class="tipPercent separator">
           <p>Select Tip %</p>
-          <button type="button" class="bnt">5%</button>
-          <button type="button" class="bnt">10%</button>
-          <button type="button" class="bnt">15%</button>
-          <button type="button" class="bnt">50%</button>
-          <input type="text" value="" />
+          <button type="button" class="btn">5%</button>
+          <button type="button" class="btn">10%</button>
+          <button type="button" class="btn">15%</button>
+          <button type="button" class="btn">25%</button>
+          <button type="button" class="btn">50%</button>
+          <input
+            type="number"
+            min="0"
+            class="btnCustom"
+            value=""
+            placeholder="Custom"
+          />
         </div>
-        <div class="personAmount">
+        <div class="personAmount separator">
           <p>Number of People</p>
           <div class="input">
             <img
@@ -51,7 +64,7 @@
               class="inputIcon"
             />
             <input
-              type="text"
+              type="number"
               placeholder="0"
               id="inputBill"
               class="inputField"
@@ -60,19 +73,21 @@
         </div>
       </section>
       <section class="resultsContainer">
-        <div class="amountRoll">
+        <div class="roll">
           <div class="title">
-            <p>Tip Amount</p>
-            <p>/ person</p>
+            <p class="titleTip">Tip Amount</p>
+            <p class="description">/ person</p>
           </div>
+          <p class="price">$4.27</p>
         </div>
-        <p>$4.27</p>
-        <div class="totalRoll"></div>
-        <div class="title">
-          <p>Tip Amount</p>
-          <p>/ person</p>
+        <div class="roll separator">
+          <div class="title">
+            <p class="titleTip">Total</p>
+            <p class="description">/ person</p>
+          </div>
+          <p class="price">$4.27</p>
         </div>
-        <p>$4.27</p>
+        <button type="button" class="btnReset separator">RESET</button>
       </section>
     </main>
   </body>
