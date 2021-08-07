@@ -65,6 +65,10 @@ main {
   border: 0.1em solid hsl(172, 67%, 45%);
 }
 
+.inputField::-webkit-input-placeholder {
+  color: hsl(184, 19%, 68%);
+}
+
 #error {
   color: hsl(0, 96%, 49%);
   display: none;

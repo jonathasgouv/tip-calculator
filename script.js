@@ -19,6 +19,10 @@ getTipPercentage = () => {
     return parseFloat(percentage);
   }
 
+  if (document.getElementById("customTip").value != "") {
+    return parseFloat(document.getElementById("customTip").value / 100);
+  }
+
   return false;
 };
 
