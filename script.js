@@ -1,3 +1,8 @@
+toggleButton = () => {
+  document.getElementById("btnReset").disabled =
+    !document.getElementById("btnReset").disabled;
+};
+
 calculateTip = (bill, persons, percentage) => {
   console.log(bill, persons, percentage);
   let tipAmount = (bill * percentage) / persons;
@@ -34,15 +39,13 @@ selectTip = (element) => {
 resetAll = () => {
   resetButtons();
 
-  document.getElementById("btnReset").disabled = true;
+  toggleButton();
 
   document.getElementById("inputBill").value = "";
   document.getElementById("inputPersons").value = "";
 
   document.getElementById("tipPrice").innerText = `$0.00`;
   document.getElementById("totalPrice").innerText = `$0.00`;
-
-  main();
 };
 
 resetButtons = () => {
@@ -54,8 +57,12 @@ resetButtons = () => {
 };
 
 main = () => {
-  // Activate 'reset' buttton
-  document.getElementById("btnReset").disabled = false;
+  console.log("main");
+
+  // Test if 'reset' button is activated, if not activate it
+  if (document.getElementById("btnReset").disabled == true) {
+    toggleButton();
+  }
   // Test if 'number of people' input is valid, if not triggers alert
   if (!document.getElementById("inputPersons").checkValidity()) {
     document.getElementById("error").style.display = "block";
