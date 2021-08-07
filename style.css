@@ -96,7 +96,7 @@ main {
 
 .btns {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
   grid-gap: 10px;
   position: relative;
 }
@@ -212,13 +212,15 @@ main {
 
   .btns {
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-gap: 7px;
+    overflow: auto;
   }
 
   .resultsContainer {
     background-color: hsl(183, 100%, 15%);
     margin-top: 0.3em;
-    margin-left: 2em;
+    margin-left: 1em;
     border-radius: 0.5em;
     height: inherit;
   }
