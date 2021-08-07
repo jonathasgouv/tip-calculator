@@ -10,6 +10,15 @@
   border: 0;
 }
 
+h1 {
+  font-size: 1.5rem;
+}
+
+h2,
+h3 {
+  font-size: 1.1rem;
+}
+
 body {
   background-color: hsl(185, 41%, 84%);
   display: flex;
@@ -17,7 +26,6 @@ body {
 }
 
 .titleDiv {
-  font-size: 1.5em;
   text-align: center;
   letter-spacing: 0.3em;
   color: hsl(183, 100%, 15%);
@@ -194,7 +202,7 @@ main {
 
   .titleDiv {
     margin-top: 0.5em;
-    padding: 1em;
+    padding: 3em;
   }
 
   main {

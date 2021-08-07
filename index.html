@@ -18,13 +18,13 @@
   <body>
     <header>
       <div class="titleDiv">
-        <p>SPLI<br />TTER</p>
+        <h1>SPLI<br />TTER</h1>
       </div>
     </header>
     <main>
       <section class="inputContainer">
         <div class="billAmount">
-          <p>Bill</p>
+          <h2>Bill</h2>
           <div class="input">
             <img
               src="images/icon-dollar.svg"
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="tipPercent separator">
-          <p>Select Tip %</p>
+          <h2>Select Tip %</h2>
           <div class="btns">
             <button type="button" class="btn" data-percentage="0.05" onClick="selectTip(this)">5%</button>
             <button type="button" class="btn" data-percentage="0.1" onClick="selectTip(this)">10%</button>
@@ -65,7 +65,7 @@
         </div>
         <div class="personAmount separator">
           <div class="roll">
-          <p>Number of People</p>
+          <h2>Number of People</h2>
           <p id="error">Can't be zero</p>
         </div>
         </div>
@@ -90,17 +90,17 @@
       <section class="resultsContainer">
         <div class="roll">
           <div class="title">
-            <p class="titleTip">Tip Amount</p>
-            <p class="description">/ person</p>
+            <h2 class="titleTip">Tip Amount</h2>
+            <h3 class="description">/ person</h3>
           </div>
-          <p class="price" id="tipPrice">$0.00</p>
+          <h2 class="price" id="tipPrice">$0.00</h2>
         </div>
         <div class="roll separator">
           <div class="title">
-            <p class="titleTip">Total</p>
-            <p class="description">/ person</p>
+            <h2 class="titleTip">Total</h2>
+            <h3 class="description">/ person</h3>
           </div>
-          <p class="price" id="totalPrice">$0.00</p>
+          <h2 class="price" id="totalPrice">$0.00</h2>
         </div>
         <button type="button" class="btnReset separator" id="btnReset" onClick="resetAll()" disabled="disabled">RESET</button>
       </section>
