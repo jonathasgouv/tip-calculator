@@ -207,6 +207,7 @@ main {
     justify-content: center;
     align-self: center;
     margin-bottom: 2em;
+    box-shadow: #a5bed575 3px 15px 14px 3px;
   }
 
   .btns {
