@@ -41,8 +41,8 @@ To see active states and the calculator working properly please visit the live v
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/mobile-first-solution-using-only-html-css-and-vanilla-js-PuLg3z9Ad)
+- [Live Site URL](https://jonathasgouv.github.io/tip-calculator/)
 
 ## My process
 
