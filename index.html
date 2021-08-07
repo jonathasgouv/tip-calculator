@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Tip calculator app</title>
+    <title>Tip calculator</title>
   </head>
   <body>
     <section>
@@ -34,29 +34,38 @@
             <input
               type="number"
               min="0"
+              step="0.01"
               placeholder="0"
               id="inputBill"
+              onkeyup="this.onchange()"
+              onChange="main()"
               class="inputField"
             />
           </div>
         </div>
         <div class="tipPercent separator">
           <p>Select Tip %</p>
-          <button type="button" class="btn">5%</button>
-          <button type="button" class="btn">10%</button>
-          <button type="button" class="btn">15%</button>
-          <button type="button" class="btn">25%</button>
-          <button type="button" class="btn">50%</button>
-          <input
-            type="number"
-            min="0"
-            class="btnCustom"
-            value=""
-            placeholder="Custom"
-          />
+          <div class="btns">
+            <button type="button" class="btn" data-percentage="0.05" onClick="selectTip(this)">5%</button>
+            <button type="button" class="btn" data-percentage="0.1" onClick="selectTip(this)">10%</button>
+            <button type="button" class="btn" data-percentage="0.15" onClick="selectTip(this)">15%</button>
+            <button type="button" class="btn" data-percentage="0.25" onClick="selectTip(this)">25%</button>
+            <button type="button" class="btn" data-percentage="0.5" onClick="selectTip(this)">50%</button>
+            <input
+              type="number"
+              min="0"
+              class="btnCustom"
+              value=""
+              placeholder="Custom"
+            />
+          </div>
         </div>
         <div class="personAmount separator">
+          <div class="roll">
           <p>Number of People</p>
+          <p id="error">Can't be zero</p>
+        </div>
+        </div>
           <div class="input">
             <img
               src="images/icon-person.svg"
@@ -65,8 +74,11 @@
             />
             <input
               type="number"
+              min="1"
               placeholder="0"
-              id="inputBill"
+              id="inputPersons"
+              onkeyup="this.onchange()"
+              onChange="main()"
               class="inputField"
             />
           </div>
@@ -78,17 +90,18 @@
             <p class="titleTip">Tip Amount</p>
             <p class="description">/ person</p>
           </div>
-          <p class="price">$0.00</p>
+          <p class="price" id="tipPrice">$0.00</p>
         </div>
         <div class="roll separator">
           <div class="title">
             <p class="titleTip">Total</p>
             <p class="description">/ person</p>
           </div>
-          <p class="price">$0.00</p>
+          <p class="price" id="totalPrice">$0.00</p>
         </div>
-        <button type="button" class="btnReset separator">RESET</button>
+        <button type="button" class="btnReset separator" id="btnReset" onClick="resetAll()" disabled>RESET</button>
       </section>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>

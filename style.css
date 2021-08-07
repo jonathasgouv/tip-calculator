@@ -28,7 +28,6 @@ main {
   background-color: #fff;
   height: 100%;
   padding: 2em;
-  padding-right: 1.5em;
   border-radius: 1.5em 1.5em 0 0;
   font-size: 1.1rem;
 }
@@ -51,8 +50,8 @@ main {
   padding: 0.5em;
   padding-left: 0.5em;
   text-align: right;
-  width: 93%;
   height: 1em;
+  width: -webkit-fill-available;
   border-radius: 0.3em;
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
@@ -64,6 +63,16 @@ main {
 .inputField:focus {
   outline: none;
   border: 0.1em solid hsl(172, 67%, 45%);
+}
+
+#error {
+  color: hsl(0, 96%, 49%);
+  display: none;
+}
+
+.inputField:invalid {
+  outline: none;
+  border: 0.1em solid hsl(0, 96%, 49%);
 }
 
 .input {
@@ -81,13 +90,19 @@ main {
   align-self: center;
 }
 
+.btns {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  position: relative;
+}
+
 .btn {
   color: #fff;
   background-color: hsl(183, 100%, 15%);
   font-size: 24px;
   padding: 0.2em;
   margin-top: 0.5em;
-  width: 48%;
   border-radius: 0.3em;
 }
 
@@ -104,10 +119,10 @@ main {
   padding: 0.2em;
   padding-right: 0.5em;
   margin-top: 0.5em;
-  width: 42.5%;
   border-radius: 0.3em;
   text-align: right;
-  border: 0.1em solid transparent;
+  border: solid transparent;
+  box-sizing: border-box;
 }
 
 .btnCustom:focus {
@@ -159,7 +174,51 @@ main {
   color: hsl(183, 100%, 15%);
 }
 
+.btnReset:disabled {
+  cursor: pointer;
+  background-color: hsl(183, 79%, 24%);
+  color: hsl(184, 84%, 22%);
+}
+
 .selected {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
+}
+
+@media (min-width: 900px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  .titleDiv {
+    margin-top: 0.5em;
+    padding: 1em;
+  }
+
+  main {
+    height: auto;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 22em 22em;
+    border-radius: 1.5em;
+    padding: 1.5em;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 2em;
+  }
+
+  .btns {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+
+  .resultsContainer {
+    background-color: hsl(183, 100%, 15%);
+    margin-top: 0.3em;
+    margin-left: 2em;
+    border-radius: 0.5em;
+    height: inherit;
+  }
+
+  .btnReset {
+    margin-top: 12em;
+  }
 }
